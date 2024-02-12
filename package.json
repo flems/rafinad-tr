@@ -1,0 +1,27 @@
+{
+  "name": "rafinad",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "gsap": "^3.11.5",
+    "throttle-debounce": "^5.0.0",
+    "verge": "^1.10.2",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1",
+    "svgo": "^3.0.2",
+    "vite": "^4.3.4",
+    "vite-plugin-image-optimizer": "^1.1.4"
+  }
+}
