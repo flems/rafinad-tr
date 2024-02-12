@@ -9,6 +9,7 @@
         :progress="progress[item.key]"
         :class="{ 'prizes__step--last': steps.length - 1 === index }"
         :last="steps.length - 1 === index"
+        :mix-blend-mode-darken="index === 3"
       >
         <template #number>
           <number
@@ -32,7 +33,9 @@
         :key="`tablet-1-${item.key}`"
         :progress="progress[item.key]"
         :last="steps?.slice(0, 3).length - 1 === index"
-        :class="{ 'prizes__step--last': steps?.slice(0, 3).length - 1 === index }"
+        :class="{
+          'prizes__step--last': steps?.slice(0, 3).length - 1 === index,
+        }"
       >
         <template #number>
           <number
@@ -54,7 +57,10 @@
         :key="`tablet-2-${item.key}`"
         :progress="progress[item.key]"
         :last="steps?.slice(2, 5).length - 1 === index"
-        :class="{ 'prizes__step--last': steps?.slice(2, 5).length - 1 === index }"
+        :class="{
+          'prizes__step--last': steps?.slice(2, 5).length - 1 === index,
+        }"
+        :mix-blend-mode-darken="index === 1"
       >
         <template #number>
           <number

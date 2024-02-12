@@ -21,7 +21,8 @@ body {
   background: #121317;
 
   background-image: url(/images/banner/bg.jpg);
-  background-size: 100% auto;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
   background-position: 50% 0%;
   background-repeat: repeat-y;
 

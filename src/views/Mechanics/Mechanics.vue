@@ -9,7 +9,7 @@
           class="mechanics__card"
           @mouseleave="onMouseleave"
           @mouseenter="onMouseenter(item.key)"
-          v-for="item in cards"
+          v-for="(item, index) in cards"
           :key="item.key"
         >
             <h3 class="mechanics__title" v-html="item.title"></h3>
@@ -19,6 +19,7 @@
               :steps="getSteps(item.key)"
               :progress="getProgress(item.key)"
               :key="`prizes-card--${item.key}`"
+              :mix-blend-mode-darken="index !== 0"
             />
         </ui-card>
       </div>
@@ -135,6 +136,10 @@ const onMouseleave = () => {
     .ui-card {
       width: 33.3%;
       flex-grow: 1;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     @media (max-width: 1024px) {
@@ -142,7 +147,7 @@ const onMouseleave = () => {
     }
 
     @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+      flex-wrap: wrap;
     }
 
     @media (max-width: 600px) {

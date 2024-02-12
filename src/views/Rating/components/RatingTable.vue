@@ -101,7 +101,7 @@ defineProps({
   }
 
   &__cell {
-    width: 13%;
+    width: 14%;
     min-width: 90px;
     text-align: left;
     padding: var(--cellPadding);

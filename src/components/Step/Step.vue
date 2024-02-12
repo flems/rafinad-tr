@@ -6,7 +6,7 @@
       'prizes-step--last': last
     }"
   >
-    <div class="prizes-step__icon" v-if="$slots.icon">
+    <div class="prizes-step__icon" v-if="$slots.icon" :class="{ 'mix-blend-mode-darken' : mixBlendModeDarken}">
       <slot name="icon" />
     </div>
     <div class="prizes-step__container">
@@ -29,9 +29,10 @@ import ProgressBar from '@/components/ProgressBar/ProgressBar.vue'
 defineProps({
   score: String,
   last: Boolean,
+  mixBlendModeDarken: Boolean,
   progress: {
     type: [String, Number],
-    default: '0'
+    default: '0',
   },
   progressBarSize: {
     type: String,
@@ -60,6 +61,7 @@ $transitionWidth: 0.25s linear 0s;
     display: flex;
     align-items: flex-end;
     margin-bottom: 6px;
+    mix-blend-mode: hard-light;
 
     @media (max-width: 1279px) {
       width: 70px;

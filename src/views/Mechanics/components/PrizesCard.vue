@@ -8,6 +8,7 @@
     :key="item.key"
     :class="{ 'prizes__step--last': stepData.length - 1 === index }"
     :last="stepData.length - 1 === index"
+    :mix-blend-mode-darken="index === 1 && mixBlendModeDarken"
   >
   <template #number>
       <number
@@ -33,6 +34,7 @@ import { onMounted, ref } from 'vue'
 
 const props = defineProps({
   steps: Array,
+  mixBlendModeDarken: Boolean,
   progress: Object
 })
 

@@ -43,14 +43,19 @@ import Rating from '@/views/Rating/Rating.vue'
   }
 
   .dragon-video {
+    --index: calc(2vw + 1vh);
     position: absolute;
     z-index: 2;
     top: 0;
     left: 100%;
     transform: rotate(5deg) translate(-70%, 0%);
     pointer-events: none;
-    width: calc(var(--index) * 70);
+    width: calc(var(--index) * 35);
     max-width: 1920px;
+
+    @media (max-width: 600px) {
+      transform: rotate(5deg) translate(-68%, 0%);
+    }
   }
 
   &__banner {
