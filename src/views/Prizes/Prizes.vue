@@ -30,12 +30,15 @@
           </div>
         </div>
         <div class="prizes-item">
+          <spotlight style="transform: translateX(7%);"/>
           <img src="/images/prizes/1.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/2.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/3.png" alt="">
         </div>
       </div>
@@ -67,12 +70,15 @@
           </div>
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/4.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/5.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/6.png" alt="">
         </div>
       </div>
@@ -112,15 +118,19 @@
           </div>
         </div>
         <div class="prizes-item">
+          <spotlight style="transform: translateX(7%);" />
           <img src="/images/prizes/7.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/8.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/9.png" alt="">
         </div>
         <div class="prizes-item">
+          <spotlight />
           <img src="/images/prizes/10.png" alt="">
         </div>
       </div>
@@ -129,6 +139,7 @@
 </template>
 
 <script setup>
+import Spotlight from '@/components/Spotlight/Spotlight.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -222,6 +233,23 @@
   flex-shrink: 1;
   flex-grow: 1;
   width: 33.3%;
+
+  .spotlight {
+    pointer-events: none;
+  }
+
+  &:hover {
+    .spotlight {
+        opacity: 0.55;
+        
+        .spotlight__item--1 {
+            transform: rotateZ(-1deg);
+        }
+        .spotlight__item--3 {
+            transform: rotateZ(1deg);
+        }
+    }
+  }
 
   img {
     width: 100%;
