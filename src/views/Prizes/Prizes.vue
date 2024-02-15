@@ -6,17 +6,26 @@
         <div class="prizes-nameplates">
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">1&nbsp;000&nbsp;000 <br>рублей</span>
+              <span class="prizes-nameplate__text">
+                <span class="prizes-nameplate__place">1 место</span>
+                1&nbsp;000&nbsp;000 рублей
+              </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">600&nbsp;000 <br>рублей</span>
+              <span class="prizes-nameplate__text">
+                <span class="prizes-nameplate__place">2 место</span>
+                600&nbsp;000 рублей
+              </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">400&nbsp;000 <br>рублей</span>
+              <span class="prizes-nameplate__text">
+                <span class="prizes-nameplate__place">3 место</span>
+                400&nbsp;000 рублей
+              </span>
             </div>
           </div>
         </div>
@@ -34,17 +43,26 @@
         <div class="prizes-nameplates">
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">300&nbsp;000 <br>рублей</span>
+              <span class="prizes-nameplate__text">
+                <span class="prizes-nameplate__place">4 место</span>
+                  300&nbsp;000 рублей
+                </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">Золотой слиток<br>100&nbsp;г.</span>
+              <span class="prizes-nameplate__text">
+                <span class="prizes-nameplate__place">5 место</span>
+                Apple iMac&nbsp;24&nbsp;M1
+              </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">???</span>
+              <span class="prizes-nameplate__text">
+                <span class="prizes-nameplate__place">6 место</span>
+                MacBook Pro&nbsp;14"
+              </span>
             </div>
           </div>
         </div>
@@ -62,22 +80,34 @@
         <div class="prizes-nameplates prizes-nameplates--4">
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">iPhone&nbsp;15 <br>Pro&nbsp;Max </span>
+              <span class="prizes-nameplate__text prizes-nameplate__text--small">
+                <span class="prizes-nameplate__place">7 место</span>
+                iPhone&nbsp;15 Pro&nbsp;Max
+              </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">iPad&nbsp;Pro <br>(2022)</span>
+              <span class="prizes-nameplate__text prizes-nameplate__text--small">
+                <span class="prizes-nameplate__place">8 место</span>
+                iPad&nbsp;Pro (2022)
+              </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text prizes-nameplate__text--small">Samsung Galaxy <br>Z&nbsp;Flip5</span>
+              <span class="prizes-nameplate__text prizes-nameplate__text--3-row prizes-nameplate__text--small">
+                <span class="prizes-nameplate__place">9 место</span>
+                  Samsung Galaxy <br>Z&nbsp;Flip5
+                </span>
             </div>
           </div>
           <div class="prizes-nameplates__item">
             <div class="prizes-nameplate">
-              <span class="prizes-nameplate__text">Apple Watch <br>Series&nbsp;9</span>
+              <span class="prizes-nameplate__text prizes-nameplate__text--small">
+                <span class="prizes-nameplate__place">10 место</span>
+                  Apple Watch Series&nbsp;9
+                </span>
             </div>
           </div>
         </div>
@@ -117,6 +147,10 @@
   &--4 {
     padding: 0 4% 0 7%;
     gap: 8%;
+
+    @media (max-width: 1360px) {
+      gap: 5%;
+    }
   }
 
   &__item {
@@ -131,7 +165,7 @@
 .prizes-nameplate {
   font-family: var(--font-secondary);
   color: #fff;
-  font-size: 36px;
+  font-size: 30px;
   background-image: url(/images/nameplate.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -142,9 +176,24 @@
   max-width: 100%;
   position: relative;
 
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  
+  @media (max-width: 1360px) {
+    font-size: 24px;
+    width: 210px;
+  }
+
+  &__place {
+    display: block;
+    line-height: 1.2;
+    color: #FFC700;
+  }
+
   &__text {
     position: absolute;
-    bottom: 13%;
+    bottom: 19%;
     left: 50%;
     width: 75%;
     white-space: nowrap;
@@ -152,8 +201,16 @@
     text-align: center;
     line-height: 1;
 
+    &--3-row {
+      bottom: 12%;
+    }
+
     &--small {
       font-size: 0.85em;
+      
+      @media (max-width: 1360px) {
+        font-size: 0.75em;
+      }
     }
   }
 }
@@ -177,9 +234,18 @@
   display: flex;
   margin-left: -9%;
   margin-right: -9%;
+  
+  @media (max-width: 1360px) {
+    margin-left: -4%;
+    margin-right: -4%;
+  }
 
   & + & {
     margin-top: 300px;
+    
+    @media (max-width: 1360px) {
+      margin-top: 200px;
+    }
   }
 
   &:before {

@@ -1,6 +1,7 @@
 <template>
   <div class="mechanics">
     <div class="container">
+      <div class="mech-cristal"></div>
       <h2 class="white-text">Механика конкурса</h2>
       <div class="mechanics__cards">
         <ui-card

@@ -1,4 +1,5 @@
 @import './reset.scss';
+@import './grid.scss';
 @import './utils.scss';
 @import './fonts.scss';
 
@@ -15,15 +16,18 @@
 }
 
 body {
+  --scrollTop: 0px;
+
   font-family: var(--font-primary);
   font-size: 18px;
   line-height: 1.25;
   background: #121317;
 
-  background-image: url(/images/banner/bg.jpg);
-  background-attachment: fixed;
-  background-size: 100vw 100vh;
+  background-image: url(/images/bg-body.png);
+  // background-attachment: fixed;
+  background-size: 100% auto;
   background-position: 50% 0%;
+  background-position: 50% calc(var(--scrollTop)/10);
   background-repeat: repeat-y;
 
   @media (max-width: 600px) {

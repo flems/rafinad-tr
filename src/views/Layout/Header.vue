@@ -27,9 +27,9 @@ import UiLink from '@/components/UiLink/UiLink.vue'
   top: 0;
   left: 0;
   width: 100%;
-  padding: calc(var(--index) * 2.1) 0;
+  padding: min(calc(var(--index) * 2.1), 48px) 0;
   color: var(--textBlack);
-  font-size: calc(var(--index) * 1.5);
+  font-size: min(calc(var(--index) * 1.5), 32px);
 
   @media (max-width: 475px) {
     padding: 16px 0;
@@ -52,7 +52,7 @@ import UiLink from '@/components/UiLink/UiLink.vue'
     flex-shrink: 0;
     
     img {
-      width: calc(var(--index) * 6);
+      width: min(calc(var(--index) * 6), 140px);
       display: block;
     }
   }

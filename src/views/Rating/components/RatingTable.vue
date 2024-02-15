@@ -12,7 +12,7 @@
           v-for="(item, index) in data"
           :key="index"
         >
-          <td class="rating-table__cell">
+          <td class="rating-table__cell rating-table__cell--first">
             <span
               class="rating-table__trend"
               :class="{ 'rating-table__trend--down': item.prev_position < item.id }"
@@ -59,6 +59,10 @@ defineProps({
   @media (max-width: 1150px) {
     --fontSize: 22px; 
   }
+
+  @media (max-width: 768px) {
+    --cellPadding: 8px;
+  }
 }
 .rating-table {
   font-size: var(--fontSize);
@@ -69,23 +73,25 @@ defineProps({
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     display: block;
-    background-image: url(/images/main-page/trend-up.png);
-    margin: 0 auto;
+    background-image: url(/images/trend-up.png);
+    flex-shrink: 0;
+    // margin: 0 auto;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
+    transform: translateY(-50%);
+    left: 24px;
 
-    @media (max-width: 479px) {
-      width: 40px;
-      height: 40px;
+    @media (max-width: 768px) {
+        width: 12px;
+        height: 12px;
+        left: 16px;
     }
     
     &--down {
-      background-image: url(/images/main-page/trend-down.png);
+      background-image: url(/images/trend-down.png);
     }
   }
 
@@ -108,6 +114,15 @@ defineProps({
     text-overflow: ellipsis;
     overflow: hidden;
     max-width: 120px;
+    position: relative;
+
+    &--first {
+      padding-left: 72px;
+
+      @media (max-width: 768px) {
+        padding-left: 44px;
+      }
+    }
 
     @media (max-width: 1150px) {
       width: 12%;

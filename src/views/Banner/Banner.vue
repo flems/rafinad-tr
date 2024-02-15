@@ -29,15 +29,12 @@ import Timer from '@/views/Timer/Timer.vue'
 
   &__timer {
     position: absolute;
-    bottom: calc(var(--index) * 4);
+    bottom: min(calc(var(--index) * 6), 80px);
     left: 0;
     z-index: 3;
     transform: rotate(-9deg);
     mix-blend-mode: darken;
-
-    @media (max-width: 768px) {
-      bottom: 32px;
-    }
+    transform-origin: bottom;
   }
 
   &__title {
@@ -46,17 +43,13 @@ import Timer from '@/views/Timer/Timer.vue'
   }
 
   &__link {
-    font-size: calc(var(--index) * 2);
+    font-size: min(calc(var(--index) * 2), 48px);
     white-space: nowrap;
     display: inline-block;
     position: absolute;
     bottom: 14%;
     left: 50%;
-    transform: translateX(-45%);
-
-    // @media (max-width: 1023px) {
-    //   font-size: 36px;
-    // }
+    transform: translateX(-35%);
 
     @media (max-width: 600px) {
       font-size: calc(var(--index) * 1);
@@ -92,8 +85,8 @@ import Timer from '@/views/Timer/Timer.vue'
   }
   
   &__wrapper {
-    padding-top: calc(var(--index) * 4);
-    padding-bottom: calc(var(--index) * 6);
+    padding-top: min(calc(var(--index) * 4), 80px);
+    padding-bottom: min(calc(var(--index) * 6), 80px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,29 +94,9 @@ import Timer from '@/views/Timer/Timer.vue'
     height: 100%;
     background-repeat: repeat-y;
     background-size: 100% auto;
-    background-position: 50% 66%;
+    background-position: 50% 60%;
     position: relative;
     background-image: url(/images/banner/scroll.png);
-
-    // @media (max-width: 800px) {
-    //   background-position: 50% 76%;
-    // }
-
-    // @media (max-width: 500px) {
-    //   background-position: 50% 90%;
-    // }
-
-    // @media (max-width: 450px) {
-    //   background-position: 50% 96%;
-    // }
-
-    // @media (max-width: 420px) {
-    //   background-position: 50% 100%;
-    // }
-
-    // @media (max-width: 390px) {
-    //   background-position: 50% 140%;
-    // }
 
     @media (max-width: 600px) {
       background-position: 50% 186%;

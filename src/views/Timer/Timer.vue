@@ -125,7 +125,8 @@ onUnmounted(() => {
   height: calc(var(--index) * 18);
   max-width: 395px;
   max-height: 434px;
-  font-size: calc(var(--index) * 1.8);
+  // font-size: calc(var(--index) * 1.8);
+  font-size: clamp(16px, calc(var(--index) * 1.8), 48px);
   font-family: var(--font-gothic);
   color: var(--textRed);
   
@@ -158,13 +159,13 @@ onUnmounted(() => {
     top: 22.5%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: calc(var(--index) * 0.89);
+    font-size: min(calc(var(--index) * 0.89), 20px);
   }
 
   &__number {
     position: absolute;
     letter-spacing: -0.02em;
-    width: calc(var(--index) * 2.6);
+    width: min(calc(var(--index) * 2.6), 60px);
     text-align: center;
 
     &--small {
@@ -173,7 +174,7 @@ onUnmounted(() => {
     
     &--day {
       top: 46%;
-      left: 29%;
+      left: 30%;
 
       &.timer__number--small {
         top: 48%;
@@ -182,12 +183,12 @@ onUnmounted(() => {
 
     &--hour {
       top: 36%;
-      left: 42%;
+      left: 43%;
     }
 
     &--min {
       top: 47%;
-      right: 23%;
+      right: 25%;
     }
   }
 }
