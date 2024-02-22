@@ -69,6 +69,18 @@ defineProps({
   font-family: var(--font-secondary);
   overflow: auto;
 
+  &::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: rgba(222, 222, 222, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(135, 132, 132, 0.6);
+    border-radius: 4px;
+  }
+
+
   &__trend {
     background-repeat: no-repeat;
     background-size: contain;

@@ -27,7 +27,6 @@ defineProps({
   background-image: url(/images/card-paper.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  // aspect-ratio: 1266/711;
 
   &--interactive {
     cursor: pointer;

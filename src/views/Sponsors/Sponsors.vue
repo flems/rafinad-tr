@@ -6,9 +6,9 @@
                 <div class="mp-sponsors__col mp-sponsors__col--diamond">
                     <sponsor-card
                         size="xl"
-                        logo="/images/sponsors/rosbank.png"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
+                        logo="/images/rafinad-logo-color.svg"
+                        title=""
+                        text="Тянется след из огня, скоро прибудут драконы."
                     />
                 </div>
             </div>

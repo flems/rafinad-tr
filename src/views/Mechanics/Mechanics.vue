@@ -71,25 +71,25 @@ const steps = [
     key: 'first',
     name: '1',
     icon: '/images/mech/step1-icon.png',
-    score: '40&nbsp;000'
+    score: '100&nbsp;000'
   },
   {
     key: 'second',
     name: '2',
     icon: '/images/mech/step2-icon.png',
-    score: '200&nbsp;000'
+    score: '400&nbsp;000'
   },
   {
     key: 'third',
     name: '3',
     icon: '/images/mech/step3-icon.png',
-    score: '600&nbsp;000'
+    score: '1&nbsp;000&nbsp;000'
   },
   {
     key: 'fourth',
     name: '4',
     icon: '/images/mech/step4-icon.png',
-    score: '1&nbsp;200&nbsp;000'
+    score: '2&nbsp;000&nbsp;000'
   },
   {
     key: 'fifth',
@@ -173,7 +173,7 @@ const onMouseleave = () => {
 
   &__card {
     opacity: 0.8;
-    transition: opacity var(--transition);
+    // transition: opacity 0.2s ease-in;
 
     &:hover {
       opacity: 1;

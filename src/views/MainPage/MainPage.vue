@@ -1,36 +1,28 @@
 <template>
     <div class="home">
       <div class="home__banner">
-        <div class="home__container">
-          <Banner />
+          <Banner :loading="loading"/>
+      </div>
 
-            <div class="dragon-video">
-              <video autoplay muted playsinline loop>
-                <source src="/files/dragon.webm" type="video/webm">
-              </video>
-              <span class="cristals">
-                <span class="cristals__item1"></span>
-                <span class="cristals__item2"></span>
-              </span>
-            </div>
+      <template v-if="!loading || true">
+        <div class="home__mechanics">
+          <mechanics  />
         </div>
-      </div>
-      <div class="home__mechanics">
-        <mechanics  />
-      </div>
-      <div class="home__sponsors">
-        <sponsors />
-      </div>
-      <div class="home__jam-prizes">
-        <prizes class="home__prizes-desk" />
-        <prizes-mobile class="home__prizes-mob" />
-      </div>
-      <div class="home__quest-info">
-        <quest-info-vue />
-      </div>
-      <div class="home__rating">
-        <rating />
-      </div>
+        <div class="home__sponsors">
+          <sponsors />
+        </div>
+        <div class="home__jam-prizes">
+          <prizes class="home__prizes-desk" />
+          <prizes-mobile class="home__prizes-mob" />
+        </div>
+        <div class="home__quest-info">
+          <quest-info-vue />
+        </div>
+        <div class="home__rating">
+          <rating />
+        </div>
+      </template>
+      
     </div>
 </template>
 
@@ -42,29 +34,27 @@ import PrizesMobile from '@/views/Prizes/PrizesMobile.vue'
 import QuestInfoVue from '@/views/QuestInfo/QuestInfo.vue'
 import Rating from '@/views/Rating/Rating.vue'
 import Sponsors from '@/views/Sponsors/Sponsors.vue'
-import { onMounted } from 'vue'
 
-onMounted(() => {
-  window.addEventListener('scroll', () => {
-    document.body.style.cssText += `--scrollTop: ${window.scrollY}px`
-  })
+defineProps({
+  loading: Boolean
 })
 </script>
 
 <style lang="scss">
-
-@keyframes levitate-animation {
-    0% {
-        transform: translateZ(0) rotate(0);
-    }
-
-    to {
-        transform: translate3d(0,-10px,0) rotate(1deg);
-    }
-}
-
 .home {
   overflow: hidden;
+
+  &__banner {
+    padding-bottom: 160px;
+
+    @media (max-width: 768px) {
+      padding-bottom: 80px;
+    }
+
+    @media (max-width: 480px) {
+      padding-bottom: 40px;
+    }
+  }
   
   &__container {
     max-width: 1440px;
@@ -94,90 +84,6 @@ onMounted(() => {
     }
   }
 
-  .dragon-video {
-    --index: calc(2vw + 1vh);
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 100%;
-    transform: rotate(5deg) translate(-70%, 0%);
-    transform: rotate(5deg) translate3d(-70%, calc(var(--scrollTop)/10), 0);
-    // pointer-events: none;
-    width: calc(var(--index) * 35);
-    max-width: 1920px;
-    
-    @media (max-width: 600px) {
-      transform: rotate(5deg) translate(-68%, 0%);
-    }
-
-    video {
-      width: 100%;
-    }
-
-    .cristals {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      
-      &__item1 {
-        animation: levitate-animation 5s ease-in-out infinite alternate;
-        position: relative;
-        aspect-ratio: 575/735;
-        width: 14%;
-        position: absolute;
-        right: 30%;
-        bottom: -4%;
-
-        &:before {
-          content: "";
-          background-image: url(/images/crystal-1.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: block;
-          width: 100%;
-          height: 100%;
-          transform: rotate(-52deg);
-          // transform: rotate(-52deg) translate3d(calc(var(--scrollTop)/-7), calc(var(--scrollTop)/13), 0);
-          z-index: 2;
-        }
-      }
-
-      &__item2 {
-        aspect-ratio: 575/735;
-        width: 12%;
-        position: absolute;
-        right: 22%;
-        bottom: -8%;
-        animation: levitate-animation 4s ease-in-out infinite alternate;
-
-        &:after {
-          content: "";
-          background-image: url(/images/crystal-1.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          display: block;
-          width: 100%;
-          height: 100%;
-          // transform: rotate(-28deg);
-          // transform: rotate(-28deg) translate3d(calc(var(--scrollTop)/200), calc(var(--scrollTop)/7), 0);
-          z-index: 3;
-        }
-      }
-
-    }
-  }
-
-  &__banner {
-    position: relative;
-    z-index: 1;
-
-    .banner {
-      // transform: translate3d(0, calc(var(--scrollTop)/15), 0);
-    }
-  }
-
   &__mechanics {
     padding-top: 120px;
     padding-bottom: 160px;
@@ -185,16 +91,27 @@ onMounted(() => {
     position: relative;
 
     @media (max-width: 768px) {
-      padding-top: 80px;
-      padding-bottom: 80px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .container {
+      position: relative;
     }
 
     .mech-cristal {
       position: absolute;
-      width: 15%;
+      width: 16%;
       right: 100%;
       top: 50%;
       animation: levitate-animation 4s ease-in-out infinite alternate;
+      z-index: -1;
+      min-width: 100px;
+      will-change: transform;
+
+      @media (max-width: 768px) {
+        top: 40%;
+      }
 
       &:before {
         content: '';
@@ -227,7 +144,7 @@ onMounted(() => {
       width: 100%;
       height: 120%;
       transform: translateY(-44%);
-      background-image: url(/images/bg-prizes.png);
+      background-image: url(/images/bg-prizes_2.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: 50% 50%;
@@ -264,7 +181,7 @@ onMounted(() => {
       width: 100%;
       height: 180%;
       max-height: 1100px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 20%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 20%, rgb(0, 0, 0) 45%, rgba(0, 0, 0, 0) 75%);
       z-index: -1;
       // background: #000;
     }

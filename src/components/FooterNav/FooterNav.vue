@@ -45,16 +45,9 @@ defineProps({
     padding-bottom: 1px;
     display: flex;
     align-items: flex-start;
-    
-    span {
-      // transition: box-shadow 0.2s ease-in;
-    }
-    
+
     &:hover {
       text-decoration: underline;
-      // span {
-      //   box-shadow: inset 0 -1px 0 0 currentColor;
-      // }
     }
   }
 

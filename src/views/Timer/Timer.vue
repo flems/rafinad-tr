@@ -111,25 +111,46 @@ onUnmounted(() => {
 
 <style lang="scss" scoped>
 .timer {
-  --index: calc(1vw + 1vh);
+  width: 9.6em;
+  display: flex;
+  font-size: 38px;
+  font-family: var(--font-gothic);
+  color: var(--textRed);
+
+  @media (max-width: 1280px) {
+    font-size: 32px;
+  }
 
   @media (max-width: 1024px) {
-    --index: calc(0.8vw + 0.6vh);
+    font-size: 28px;
   }
 
   @media (max-width: 768px) {
-    --index: calc(0.7vw + 0.6vh);
+    font-size: 18px;
   }
 
-  width: calc(var(--index) * 16);
-  height: calc(var(--index) * 18);
-  max-width: 395px;
-  max-height: 434px;
-  // font-size: calc(var(--index) * 1.8);
-  font-size: clamp(16px, calc(var(--index) * 1.8), 48px);
-  font-family: var(--font-gothic);
-  color: var(--textRed);
-  
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 10px;
+  }
+
+  &:before {
+    content: '';
+    width: 100%;
+    padding-top: 112%;
+  }
+
   &:after {
     content: '';
     position: absolute;
@@ -156,39 +177,40 @@ onUnmounted(() => {
     line-height: 0.9;
     text-align: center;
     width: max-content;
-    top: 22.5%;
+    top: 23%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: min(calc(var(--index) * 0.89), 20px);
+    font-size: 0.5em;
   }
 
   &__number {
     position: absolute;
     letter-spacing: -0.02em;
-    width: min(calc(var(--index) * 2.6), 60px);
+    width: 1.6em;
     text-align: center;
 
     &--small {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
     
     &--day {
       top: 46%;
-      left: 30%;
+      left: 29%;
 
       &.timer__number--small {
         top: 48%;
+        left: 30%;
       }
     }
 
     &--hour {
-      top: 36%;
-      left: 43%;
+      top: 38%;
+      left: 42%;
     }
 
     &--min {
-      top: 47%;
-      right: 25%;
+      top: 46.5%;
+      right: 24%;
     }
   }
 }

@@ -4,7 +4,7 @@
       <h2 class="white-text">ТОП участников</h2>
         <div class="mp-rating__container">
           
-          <rating-table :data="exampleData" />
+          <rating-table :data="data" />
         </div>
     </div>
   </div>
@@ -13,12 +13,11 @@
 <script setup>
 import { onBeforeMount, ref } from 'vue'
 import RatingTable from './components/RatingTable.vue'
-import { exampleData } from './exampleData.js'
 
-const data = ref(exampleData)
+const data = ref([])
 
 
-const isEnable = window?.__VUE_STATE__?.enableTable || true
+const isEnable = window?.__VUE_STATE__?.enableTable
 
 const getData = () => {
   fetch('https://rafinad.io/api/v1/bonuspoint/top_data/',

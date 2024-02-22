@@ -48,7 +48,7 @@ defineProps({
   }
 
   &__underline {
-    width: 230%;
+    width: 80%;
     aspect-ratio: 147/6;
     position: absolute;
     bottom: 0;
@@ -57,6 +57,11 @@ defineProps({
     pointer-events: none;
     fill: currentColor;
     transition: fill var(--transition);
+
+    @media (max-width: 475px) {
+      width: 100%;
+      min-width: 3em;
+    }
   }
 }
 </style>

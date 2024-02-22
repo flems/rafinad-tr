@@ -141,6 +141,7 @@ defineProps({
 
         img {
             max-width: 100%;
+            max-height: 80px;
             display: block;
         }
     }

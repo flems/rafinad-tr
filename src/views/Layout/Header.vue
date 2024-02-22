@@ -29,15 +29,28 @@ import UiLink from '@/components/UiLink/UiLink.vue'
   width: 100%;
   padding: min(calc(var(--index) * 2.1), 48px) 0;
   color: var(--textBlack);
-  font-size: min(calc(var(--index) * 1.5), 32px);
+  font-size: 28px;
 
-  @media (max-width: 475px) {
+  .ui-link__underline {
+    width: 230%;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 320px) {
     padding: 16px 0;
+    font-size: 14px;
   }
 
   &__container {
     display: flex;
-    padding: 0 calc(var(--index) * 5);
+    padding: 0 min(105px, 10%);
     max-width: var(--small-container-width);
     margin: 0 auto;
   }
@@ -52,8 +65,20 @@ import UiLink from '@/components/UiLink/UiLink.vue'
     flex-shrink: 0;
     
     img {
-      width: min(calc(var(--index) * 6), 140px);
+      width: 140px;
       display: block;
+
+      @media (max-width: 1024px) {
+        width: 120px;
+      }
+
+      @media (max-width: 768px) {
+        width: 100px;
+      }
+
+      @media (max-width: 475px) {
+        width: 80px;
+      }
     }
   }
 }

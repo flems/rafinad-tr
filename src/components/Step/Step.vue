@@ -93,8 +93,6 @@ $transitionWidth: 0.25s linear 0s;
   &__progress {
     flex-grow: 1;
     position: relative;
-    // padding-top: 40px;
-    // margin-bottom: -40px;
 
     @media (max-width: 600px) {
       margin-bottom: -24px;

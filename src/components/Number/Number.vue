@@ -34,10 +34,6 @@ defineProps({
     type: String,
     default: 'l',
     validator: prop => ['l', 'm'].includes(prop)
-  },
-  text: {
-    type: Boolean,
-    default: false
   }
 })
 </script>

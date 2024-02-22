@@ -39,7 +39,6 @@ defineProps({
   height: var(--height);
   width: 100%;
   position: relative;
-  // max-width: 260px;
 
   @media (max-width: 600px) {
     height: 20px;

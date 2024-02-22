@@ -149,6 +149,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
 
 .prizes-nameplates {
   display: flex;
+  justify-content: space-evenly;
   position: absolute;
   width: 100%;
   top: 100%;
@@ -166,8 +167,8 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
 
   &__item {
     flex-shrink: 1;
-    flex-grow: 1;
-    width: 16%;
+    // flex-grow: 1;
+    width: 28%;
     display: flex;
     justify-content: center;
   }
@@ -176,14 +177,14 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
 .prizes-nameplate {
   font-family: var(--font-secondary);
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   background-image: url(/images/nameplate.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
   aspect-ratio: 256/194;
   display: inline-block;
-  width: 290px;
+  width: 200px;
   max-width: 100%;
   position: relative;
 
@@ -226,13 +227,11 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
   }
 }
 
-
 .prizes-item {
   position: relative;
   z-index: 2;
   flex-shrink: 1;
-  flex-grow: 1;
-  width: 33.3%;
+  width: 28%;
 
   .spotlight {
     pointer-events: none;
@@ -240,14 +239,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
 
   &:hover {
     .spotlight {
-        opacity: 0.55;
-        
-        .spotlight__item--1 {
-            transform: rotateZ(-1deg);
-        }
-        .spotlight__item--3 {
-            transform: rotateZ(1deg);
-        }
+        opacity: 0.3;
     }
   }
 
@@ -260,6 +252,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
 .prizes-row {
   position: relative;
   display: flex;
+  justify-content: space-evenly;
   margin-left: -9%;
   margin-right: -9%;
   
@@ -269,7 +262,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
   }
 
   & + & {
-    margin-top: 300px;
+    margin-top: 170px;
     
     @media (max-width: 1360px) {
       margin-top: 200px;
@@ -280,7 +273,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
     content: '';
     position: absolute;
     width: auto;
-    height: 330px;
+    height: 280px;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%) translateY(30%);
