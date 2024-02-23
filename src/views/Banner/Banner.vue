@@ -1,6 +1,5 @@
 <template>
   <div class="banner">
-    
     <div class="banner__container">
       <div class="banner__eggs">
         <img src="/images/eggs.png" alt="">
@@ -69,7 +68,6 @@ const logoFireVideo = ref()
 const dragonVideo = ref()
 const logoVideo = ref()
 
-// const loading = ref(true)
 const isDragonVideoReady = ref(false)
 const isLogoFireVideoReady = ref(false)
 const isLogoVideoReady = ref(false)
@@ -81,10 +79,15 @@ const isReadyToStart = computed(() => {
   return !props.loading && isDragonVideoReady.value && isLogoFireVideoReady.value && isLogoVideoReady.value
 })
 const burn = () => {
+  // общая задержа до начала анимации
   setTimeout(() => {
     dragonVideo.value.play()
+
+    // задержка перед поджиганием лого
     setTimeout(() => {
       logoFireVideo.value.play()
+
+      // задержка перед показом горящего лого
       setTimeout(() => {
         isBurned.value = true
       }, 500)
@@ -105,9 +108,7 @@ onMounted (() => {
 })
 
 watch(isReadyToStart, (newVal) => {
-    if (newVal) {
-      burn()
-    }
+    if (newVal) burn()
 })
 </script>
 

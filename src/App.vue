@@ -23,7 +23,6 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 const loading = ref(true)
 
 const handleLoad = () => {
-  // вместо setTimeout, надо сделать проверку загрузки всех видосов
   loading.value = false
 }
 

@@ -4,26 +4,24 @@
           <Banner :loading="loading"/>
       </div>
 
-      <template v-if="!loading || true">
-        <div class="home__mechanics">
-          <mechanics  />
-        </div>
-        <div class="home__sponsors">
-          <sponsors />
-        </div>
-        <div class="home__jam-prizes">
-          <prizes class="home__prizes-desk" />
-          <prizes-mobile class="home__prizes-mob" />
-        </div>
-        <div class="home__quest-info">
-          <quest-info-vue />
-        </div>
-        <div class="home__rating">
-          <rating />
-        </div>
-      </template>
+      <div class="home__mechanics">
+        <mechanics  />
+      </div>
+      <div class="home__sponsors">
+        <sponsors />
+      </div>
+      <div class="home__jam-prizes">
+        <prizes class="home__prizes-desk" />
+        <prizes-mobile class="home__prizes-mob" />
+      </div>
+      <div class="home__quest-info">
+        <quest-info-vue />
+      </div>
+      <div class="home__rating">
+        <rating />
+      </div>
       
-    </div>
+  </div>
 </template>
 
 <script setup>
@@ -123,7 +121,6 @@ defineProps({
         width: 100%;
         height: 100%;
         transform: rotate(22deg) translateY(-50%) translateX(50%);
-        // transform: rotate(22deg) translate3d(calc(var(--scrollTop) / 200), calc(var(--scrollTop) / 20 ), 0);
         z-index: -1;
       }
     }
@@ -167,7 +164,6 @@ defineProps({
   }
   
   &__quest-info {
-    // padding-top: 120px;
     padding-bottom: 160px;
     position: relative;
     z-index: 3;
@@ -183,7 +179,6 @@ defineProps({
       max-height: 1100px;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 20%, rgb(0, 0, 0) 45%, rgba(0, 0, 0, 0) 75%);
       z-index: -1;
-      // background: #000;
     }
 
     @media (max-width: 768px) {

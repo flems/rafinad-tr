@@ -12,6 +12,7 @@
                     />
                 </div>
             </div>
+            <!-- по другим спонсора не доделано и было поставлено на паузу -->
             <!-- <div class="mp-sponsors__row mp-sponsors__row--2">
                 <div class="mp-sponsors__col">
                     <sponsor-card

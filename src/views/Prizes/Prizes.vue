@@ -167,7 +167,6 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
 
   &__item {
     flex-shrink: 1;
-    // flex-grow: 1;
     width: 28%;
     display: flex;
     justify-content: center;

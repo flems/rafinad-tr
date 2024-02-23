@@ -61,12 +61,7 @@ const socialList = [
     link: 'http://tenchat.ru/rafinadio',
     name: 'TenChat',
     icon: '/images/icons/tenchat.svg'
-  },
-  // {
-  //   link: 'http://instagram.com/rafinad.io',
-  //   name: 'Та самая соцсеть',
-  //   icon: '/images/icons/inst.svg'
-  // }
+  }
 ]
 </script>
 
@@ -86,7 +81,6 @@ const socialList = [
     display: block;
     width: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 50%, rgb(0, 0, 0) 100%);
-    // padding-top: 20%;
     height: 100%;
     bottom: 0;
     left: 0;
@@ -100,7 +94,6 @@ const socialList = [
     align-items: flex-start;
     height: 100%;
     justify-content: space-between;
-
     margin-bottom: 32px;
   }
 
