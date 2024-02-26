@@ -19,12 +19,12 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      output: {
-        manualChunks: () => 'main.js',
-        entryFileNames: `assets/main.js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`
-      },
+      // output: {
+      //   manualChunks: () => 'main.js',
+      //   entryFileNames: `assets/main.js`,
+      //   chunkFileNames: `assets/[name].js`,
+      //   assetFileNames: `assets/[name].[ext]`
+      // },
       // output: {
       //   entryFileNames: `assets/main.js`,
       //   chunkFileNames: `assets/[name].js`,

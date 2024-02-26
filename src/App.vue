@@ -2,7 +2,7 @@
   <div class="global-wrapper">
     <transition name="fade" mode="out-in">
       <div v-if="loading" class="loader-wrapper">
-          <preloader />
+        <preloader />
       </div>
     </transition>
     <header-layout />
@@ -14,26 +14,33 @@
 </template>
 
 <script setup>
-import Preloader from '@/components/Preloader/Preloader.vue'
+import Preloader from "@/components/Preloader/Preloader.vue";
 
-import FooterLayout from './views/Layout/Footer.vue'
-import HeaderLayout from './views/Layout/Header.vue'
-import MainPage from './views/MainPage/MainPage.vue'
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-const loading = ref(true)
+import FooterLayout from "./views/Layout/Footer.vue";
+import HeaderLayout from "./views/Layout/Header.vue";
+import MainPage from "./views/MainPage/MainPage.vue";
+import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
+const loading = ref(true);
 
 const handleLoad = () => {
-  loading.value = false
-}
+  setTimeout(() => {
+    loading.value = false;
+  }, 1000)
+};
 
 onMounted(() => {
-  window.addEventListener('load', handleLoad);
-})
+  nextTick(() => {
+    window.addEventListener("load", (event) => {
+      handleLoad();
+    });
+  });
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('load', handleLoad);
-})
-
+  window.removeEventListener("load", (event) => {
+    handleLoad();
+  });
+});
 </script>
 
 <style scoped>

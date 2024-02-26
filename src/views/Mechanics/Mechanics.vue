@@ -49,12 +49,12 @@ const cards = [
   {
     key: 'two',
     title: 'Получай кешбэк',
-    detail: 'Ты <span class="red-text">гарантированно получаешь кешбэк</span>, достигая чек-пойнта. <span class="red-text">Больше трафика&nbsp;&mdash; круче кешбэк</span>, неважно когда ты подключился в&nbsp;игру и&nbsp;кто сегодня в&nbsp;ТОПе!'
+    detail: 'Вы <span class="red-text">гарантированно получаете кешбэк</span>, достигая чек-пойнта. <span class="red-text">Больше трафика&nbsp;&mdash; круче кешбэк</span>, неважно когда ты подключился в&nbsp;игру и&nbsp;кто сегодня в&nbsp;ТОПе!'
   },
   {
     key: 'three',
     title: 'Попадай в&nbsp;топ',
-    detail: 'Начиная с&nbsp;<span class="red-text">4-го уровня ты начинаешь бороться за место в&nbsp;ТОПе</span>, где среди лучших 10 участников будет распределен призовой фонд <span class="red-text">более&nbsp;3&nbsp;000&nbsp;000 рублей.</span>'
+    detail: 'Начиная с&nbsp;<span class="red-text">4-го уровня вы начинаете бороться за место в&nbsp;ТОПе</span>, где среди лучших 10 участников будет распределен призовой фонд <span class="red-text">более&nbsp;3&nbsp;000&nbsp;000 рублей.</span>'
   },
 ]
 
@@ -89,7 +89,7 @@ const steps = [
     key: 'fourth',
     name: '4',
     icon: '/images/mech/step4-icon.png',
-    score: '2&nbsp;000&nbsp;000'
+    score: '1&nbsp;500&nbsp;000'
   },
   {
     key: 'fifth',

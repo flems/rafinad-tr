@@ -4,7 +4,10 @@
       <div class="banner__eggs">
         <img src="/images/eggs.png" alt="">
       </div>
-
+      <!-- general: {{ !props.loading && isDragonVideoReady && isLogoFireVideoReady && isLogoVideoReady }} <br>
+      isDragonVideoReady:{{isDragonVideoReady}}<br>
+      isLogoFireVideoReady: {{ isLogoFireVideoReady }}<br>
+      isLogoVideoReady: {{ isLogoVideoReady }}<br> -->
       <div class="banner__logo">
         <div class="banner-logo" :class="{ 'banner-logo--burned' : isBurned }">
           <img class="banner-logo__logo" src="/images/banner/logo.svg" alt="">
@@ -25,7 +28,8 @@
       </div>
 
       <div class="banner__dragon dragon-video">
-        <video ref="dragonVideo" muted playsinline preload="auto">
+        <img class="dragon-video__poster" src="/images/dragon-poster_1.png" alt="">
+        <video ref="dragonVideo" cotrols muted playsinline preload="auto">
           <source src="/files/dragon.mov?url" type='video/mp4; codecs="hvc1"'>
           <source src="/files/dragon.webm" type="video/webm">
         </video>
@@ -59,7 +63,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch, computed } from 'vue'
+import { onMounted, ref, watch, computed, nextTick } from 'vue'
 import UiLink from '@/components/UiLink/UiLink.vue'
 import Timer from '@/views/Timer/Timer.vue'
 
@@ -76,10 +80,12 @@ const props = defineProps({
 })
 
 const isReadyToStart = computed(() => {
-  return !props.loading && isDragonVideoReady.value && isLogoFireVideoReady.value && isLogoVideoReady.value
+  // return !props.loading && isDragonVideoReady.value && isLogoFireVideoReady.value && isLogoVideoReady.value
+  return !props.loading
 })
 const burn = () => {
   // общая задержа до начала анимации
+  // console.log(123);
   setTimeout(() => {
     dragonVideo.value.play()
 
@@ -92,22 +98,27 @@ const burn = () => {
         isBurned.value = true
       }, 500)
     }, 100)
-  }, 1000)
+  }, 500)
 }
 
 onMounted (() => {
-  dragonVideo.value.addEventListener('canplaythrough', function() {
-    isDragonVideoReady.value = true
-  })
-  logoFireVideo.value.addEventListener('canplaythrough', function() {
-    isLogoFireVideoReady.value = true
-  })
-  logoVideo.value.addEventListener('canplaythrough', function() {
-    isLogoVideoReady.value = true
+  // console.log(123123);
+  nextTick(() => {
+    dragonVideo.value.addEventListener('canplay', function() {
+      // console.log('rs');
+      isDragonVideoReady.value = true
+    })
+    logoFireVideo.value.addEventListener('canplay', function() {
+      isLogoFireVideoReady.value = true
+    })
+    logoVideo.value.addEventListener('canplay', function() {
+      isLogoVideoReady.value = true
+    })
   })
 })
 
 watch(isReadyToStart, (newVal) => {
+  // console.log(4132);
     if (newVal) burn()
 })
 </script>
@@ -162,6 +173,7 @@ watch(isReadyToStart, (newVal) => {
   }
 
   &__dragon {
+    // position: relative;
     position: absolute;
     top: -18%;
     right: -43%;
@@ -169,6 +181,32 @@ watch(isReadyToStart, (newVal) => {
     width: 130%;
     pointer-events: none;
     z-index: 2;
+
+    .dragon-video__poster {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      position: absolute;
+      height: auto;
+      opacity: 1;
+      max-width: none;
+      // filter: brightness(220.5);
+      z-index: -1;
+      max-width: none !important;
+      display: block;
+      display: none;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      //iphone
+      @supports (-webkit-touch-callout: none) { 
+        bottom: 6.5%;
+        right: 6.5%;
+        width: 87%;
+      }
+    }
     
     @media (max-width: 1380px) {
       right: -38%;
