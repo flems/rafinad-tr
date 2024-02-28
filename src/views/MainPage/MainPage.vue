@@ -113,7 +113,7 @@ defineProps({
 
       &:before {
         content: '';
-        background-image: url(/images/crystal-2.png);
+        background-image: url(/images/crystal-2.webp);
         background-repeat: no-repeat;
         background-size: contain;
         aspect-ratio: 610/767;
@@ -141,7 +141,7 @@ defineProps({
       width: 100%;
       height: 120%;
       transform: translateY(-44%);
-      background-image: url(/images/bg-prizes_2.png);
+      background-image: url(/images/bg-prizes_2.webp);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: 50% 50%;
@@ -195,7 +195,7 @@ defineProps({
 
       &:before {
         content: '';
-        background-image: url(/images/sword.png);
+        background-image: url(/images/sword.webp);
         background-repeat: no-repeat;
         background-size: contain;
         aspect-ratio: 610/767;

@@ -158,7 +158,7 @@ onUnmounted(() => {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/images/timer-bg.png);
+    background-image: url(/images/timer-bg.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;

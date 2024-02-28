@@ -48,7 +48,7 @@ onBeforeMount(() => {
 <style lang="scss">
 .mp-rating {
   &__container {
-    background-image: url(/images/rating/table-bg.png);
+    background-image: url(/images/rating/table-bg.webp);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: clamp(32px, 7.5%, 72px);

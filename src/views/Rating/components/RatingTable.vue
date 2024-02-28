@@ -88,7 +88,7 @@ defineProps({
     width: 20px;
     height: 20px;
     display: block;
-    background-image: url(/images/trend-up.png);
+    background-image: url(/images/trend-up.webp);
     flex-shrink: 0;
     // margin: 0 auto;
     position: absolute;
@@ -103,7 +103,7 @@ defineProps({
     }
     
     &--down {
-      background-image: url(/images/trend-down.png);
+      background-image: url(/images/trend-down.webp);
     }
   }
 

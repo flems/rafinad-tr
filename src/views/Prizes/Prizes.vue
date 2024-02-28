@@ -31,15 +31,15 @@
         </div>
         <div class="prizes-item">
           <spotlight style="transform: translateX(7%);"/>
-          <img src="/images/prizes/1.png" alt="">
+          <img src="/images/prizes/1.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/2.png" alt="">
+          <img src="/images/prizes/2.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/3.png" alt="">
+          <img src="/images/prizes/3.webp" alt="">
         </div>
       </div>
       <div class="prizes-row">
@@ -71,15 +71,15 @@
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/4.png" alt="">
+          <img src="/images/prizes/4.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/5.png" alt="">
+          <img src="/images/prizes/5.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/6.png" alt="">
+          <img src="/images/prizes/6.webp" alt="">
         </div>
       </div>
       <div class="prizes-row">
@@ -119,19 +119,19 @@
         </div>
         <div class="prizes-item">
           <spotlight style="transform: translateX(7%);" />
-          <img src="/images/prizes/7.png" alt="">
+          <img src="/images/prizes/7.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/8.png" alt="">
+          <img src="/images/prizes/8.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/9.png" alt="">
+          <img src="/images/prizes/9.webp" alt="">
         </div>
         <div class="prizes-item">
           <spotlight />
-          <img src="/images/prizes/10.png" alt="">
+          <img src="/images/prizes/10.webp" alt="">
         </div>
       </div>
     </div>
@@ -177,7 +177,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
   font-family: var(--font-secondary);
   color: #fff;
   font-size: 20px;
-  background-image: url(/images/nameplate.png);
+  background-image: url(/images/nameplate.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -277,7 +277,7 @@ import Spotlight from '@/components/Spotlight/Spotlight.vue';
     left: 50%;
     transform: translateX(-50%) translateY(30%);
     aspect-ratio: 1686/270;
-    background-image: url(/images/shelf.png);
+    background-image: url(/images/shelf.webp);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;

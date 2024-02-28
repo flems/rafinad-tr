@@ -70,31 +70,31 @@ const steps = [
   {
     key: 'first',
     name: '1',
-    icon: '/images/mech/step1-icon.png',
+    icon: '/images/mech/step1-icon.webp',
     score: '100&nbsp;000'
   },
   {
     key: 'second',
     name: '2',
-    icon: '/images/mech/step2-icon.png',
+    icon: '/images/mech/step2-icon.webp',
     score: '400&nbsp;000'
   },
   {
     key: 'third',
     name: '3',
-    icon: '/images/mech/step3-icon.png',
+    icon: '/images/mech/step3-icon.webp',
     score: '1&nbsp;000&nbsp;000'
   },
   {
     key: 'fourth',
     name: '4',
-    icon: '/images/mech/step4-icon.png',
+    icon: '/images/mech/step4-icon.webp',
     score: '1&nbsp;500&nbsp;000'
   },
   {
     key: 'fifth',
     name: 'top',
-    icon: '/images/mech/step5-icon.png',
+    icon: '/images/mech/step5-icon.webp',
     score: ''
   },
 ]

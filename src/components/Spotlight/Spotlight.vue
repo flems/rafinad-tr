@@ -24,7 +24,7 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        background-image: url(/images/spotlight.png);
+        background-image: url(/images/spotlight.webp);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 50% 50%;

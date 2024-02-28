@@ -17,7 +17,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="l"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />
@@ -25,7 +25,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="l"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />
@@ -35,7 +35,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="m"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />
@@ -43,7 +43,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="m"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />
@@ -51,7 +51,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="m"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />
@@ -61,7 +61,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="s"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />
@@ -69,7 +69,7 @@
                 <div class="mp-sponsors__col">
                     <sponsor-card
                         size="s"
-                        logo="/images/sponsors/rosbank.png"
+                        logo="/images/sponsors/rosbank.webp"
                         title="Алмазный дракон"
                         text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
                     />

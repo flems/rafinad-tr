@@ -24,7 +24,7 @@ defineProps({
 
 <style lang="scss">
 .ui-card {
-  background-image: url(/images/card-paper.png);
+  background-image: url(/images/card-paper.webp);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 

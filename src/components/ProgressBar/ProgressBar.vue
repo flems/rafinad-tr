@@ -58,13 +58,13 @@ defineProps({
   }
 
   &:before {
-    background-image: url(/images/progress-bar.png);
+    background-image: url(/images/progress-bar.webp);
     transition: opacity 0;
     transition-delay: 0s;
   }
 
   &:after {
-    background-image: url(/images/progress-bar-red.png);
+    background-image: url(/images/progress-bar-red.webp);
     opacity: 0;
     transition: opacity 0;
     transition-delay: 0s;
@@ -99,7 +99,7 @@ defineProps({
     &:after {
       content: '';
       height: 100%;
-      background-image: url(/images/progress-bar-fill.png);
+      background-image: url(/images/progress-bar-fill.webp);
       display: block;
       background-size: 100% 100%;
       background-repeat: no-repeat;

@@ -1,50 +1,54 @@
 <template>
-  <div class="banner">
+  <div class="banner" :class="{ 'is-safari' : isSafari }">
     <div class="banner__container">
       <div class="banner__eggs">
-        <img src="/images/eggs.png" alt="">
+        <img src="/images/eggs.webp" alt="">
       </div>
-      <!-- general: {{ !props.loading && isDragonVideoReady && isLogoFireVideoReady && isLogoVideoReady }} <br>
-      isDragonVideoReady:{{isDragonVideoReady}}<br>
-      isLogoFireVideoReady: {{ isLogoFireVideoReady }}<br>
-      isLogoVideoReady: {{ isLogoVideoReady }}<br> -->
+      
       <div class="banner__logo">
         <div class="banner-logo" :class="{ 'banner-logo--burned' : isBurned }">
           <img class="banner-logo__logo" src="/images/banner/logo.svg" alt="">
           <div class="banner-logo__hole">
-            <img src="/images/banner/hole_2.png" alt="">
+            <img src="/images/banner/hole_2.webp" alt="" width="715" height="511">
           </div>
       
-          <video class="banner-logo__video-logo" autoplay muted playsinline loop preload="auto" ref="logoVideo">
-            <source src="/files/logo.mov?url"  type='video/mp4; codecs="hvc1"'>
-            <source src="/files/logo.webm" type="video/webm">
+          <video class="banner-logo__video-logo" muted playsinline loop preload="auto" ref="logoVideo">
+            <source src="/files/logo.mov?url"  type='video/mp4; codecs="hvc1"' media="(max-width: 1024px)">
+            <source src="/files/logo.webm" type="video/webm" media="(max-width: 1024px)">
+            <source src="/files/logo-mob.mov?url"  type='video/mp4; codecs="hvc1"' media="(min-width: 1023px)">
+            <source src="/files/logo-mob.webm" type="video/webm" media="(min-width: 1023px)">
           </video>
 
           <video class="banner-logo__video-fire" ref="logoFireVideo" muted playsinline preload="auto">
-            <source src="/files/fire.mov?url"  type='video/mp4; codecs="hvc1"'>
-            <source src="/files/fire.webm" type="video/webm">
+            <source src="/files/fire.mov?url"  type='video/mp4; codecs="hvc1"' media="(max-width: 1024px)">
+            <source src="/files/fire.webm" type="video/webm" media="(max-width: 1024px)">
+            <source src="/files/fire-mob.mov?url"  type='video/mp4; codecs="hvc1"' media="(min-width: 1023px)">
+            <source src="/files/fire-mob.webm" type="video/webm" media="(min-width: 1023px)">
           </video>
         </div>
       </div>
 
-      <div class="banner__dragon dragon-video">
-        <img class="dragon-video__poster" src="/images/dragon-poster_1.png" alt="">
-        <video ref="dragonVideo" cotrols muted playsinline preload="auto">
-          <source src="/files/dragon.mov?url" type='video/mp4; codecs="hvc1"'>
-          <source src="/files/dragon.webm" type="video/webm">
+      <div class="banner__dragon dragon-video" ref="dragonContainer">
+        <img class="dragon-video__poster" src="/images/dragon-poster_1.webp" alt="">
+        <video ref="dragonVideo" muted playsinline preload="auto">
+          <source src="/files/dragon.mov?url" type='video/mp4; codecs="hvc1"' media="(max-width: 1024px)">
+          <source src="/files/dragon.webm" type="video/webm" media="(max-width: 1024px)">
+          <source src="/files/dragon.webm" type="video/webm" media="(min-width: 1024px)">
+          <source src="/files/dragon-mob.mov?url" type='video/mp4; codecs="hvc1"' media="(min-width: 1023px)">
+          <source src="/files/dragon-mob.webm" type="video/webm" media="(max-width: 1023px)">
         </video>
         <div class="dragon-video__crystals crystals">
           <div class="crystals__item crystals__item--1">
-            <img class="crystals__img" src="/images/crystal-1.png" alt="">
+            <img class="crystals__img" src="/images/crystal-1.webp" alt="">
           </div>
           <div class="crystals__item crystals__item--2">
-            <img class="crystals__img" src="/images/crystal-2.png" alt="">
+            <img class="crystals__img" src="/images/crystal-2.webp" alt="">
           </div>
           <div class="crystals__item crystals__item--3">
-            <img class="crystals__img" src="/images/crystal-3.png" alt="">
+            <img class="crystals__img" src="/images/crystal-3.webp" alt="">
           </div>
           <div class="crystals__item crystals__item--4">
-            <img class="crystals__img" src="/images/crystal-2.png" alt="">
+            <img class="crystals__img" src="/images/crystal-2.webp" alt="">
           </div>
         </div>
       </div>
@@ -63,7 +67,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref, watch, computed, nextTick } from 'vue'
+import { onBeforeMount, ref, watch } from 'vue'
 import UiLink from '@/components/UiLink/UiLink.vue'
 import Timer from '@/views/Timer/Timer.vue'
 
@@ -71,55 +75,35 @@ const isBurned = ref(false)
 const logoFireVideo = ref()
 const dragonVideo = ref()
 const logoVideo = ref()
+const isSafari = ref(false)
 
-const isDragonVideoReady = ref(false)
-const isLogoFireVideoReady = ref(false)
-const isLogoVideoReady = ref(false)
 const props = defineProps({
   loading: Boolean
 })
 
-const isReadyToStart = computed(() => {
-  // return !props.loading && isDragonVideoReady.value && isLogoFireVideoReady.value && isLogoVideoReady.value
-  return !props.loading
-})
 const burn = () => {
-  // общая задержа до начала анимации
-  // console.log(123);
   setTimeout(() => {
     dragonVideo.value.play()
+    logoVideo.value.play()
+    logoFireVideo.value.play()
 
-    // задержка перед поджиганием лого
-    setTimeout(() => {
-      logoFireVideo.value.play()
+    logoFireVideo.value.addEventListener('timeupdate', () => {
+      const threshold = 1; // Пороговое значение времени (в секундах) до окончания видео
 
-      // задержка перед показом горящего лого
-      setTimeout(() => {
+      if (logoFireVideo.value.duration - logoFireVideo.value.currentTime <= threshold) {
         isBurned.value = true
-      }, 500)
-    }, 100)
+      }
+    })
   }, 500)
 }
 
-onMounted (() => {
-  // console.log(123123);
-  nextTick(() => {
-    dragonVideo.value.addEventListener('canplay', function() {
-      // console.log('rs');
-      isDragonVideoReady.value = true
-    })
-    logoFireVideo.value.addEventListener('canplay', function() {
-      isLogoFireVideoReady.value = true
-    })
-    logoVideo.value.addEventListener('canplay', function() {
-      isLogoVideoReady.value = true
-    })
-  })
+watch(() => props.loading, (newValue) => {
+  console.log(newValue);
+  if (!newValue) burn()
 })
 
-watch(isReadyToStart, (newVal) => {
-  // console.log(4132);
-    if (newVal) burn()
+onBeforeMount(() => {
+  isSafari.value = Boolean(window.safari)
 })
 </script>
 
@@ -145,7 +129,7 @@ watch(isReadyToStart, (newVal) => {
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    background-image: url(/images/banner/scroll-full_2.png);
+    background-image: url(/images/banner/scroll-full_2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -153,7 +137,7 @@ watch(isReadyToStart, (newVal) => {
     &:after {
       content: '';
       width: 124%;
-      background-image: url(/images/banner/scroll-end_2.png);
+      background-image: url(/images/banner/scroll-end_2.webp);
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: contain;
@@ -194,7 +178,7 @@ watch(isReadyToStart, (newVal) => {
       z-index: -1;
       max-width: none !important;
       display: block;
-      display: none;
+      // display: none;
 
       @media (max-width: 768px) {
         display: block;
@@ -202,9 +186,9 @@ watch(isReadyToStart, (newVal) => {
 
       //iphone
       @supports (-webkit-touch-callout: none) { 
-        bottom: 6.5%;
-        right: 6.5%;
-        width: 87%;
+          bottom: 6.5%;
+          right: 6.5%;
+          width: 87%;
       }
     }
     
@@ -397,6 +381,15 @@ watch(isReadyToStart, (newVal) => {
       width: 34%;
       top: 14%;
     }
+  }
+}
+
+// macbook safari
+.is-safari {
+  .dragon-video__poster {
+    bottom: 6.5%;
+    right: 6.5%;
+    width: 87%;
   }
 }
 </style>

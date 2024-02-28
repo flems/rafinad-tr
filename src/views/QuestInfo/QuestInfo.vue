@@ -54,7 +54,7 @@ import UiCard from '@/components/UiCard/UiCard.vue'
   }
 
   &__img {
-    background: url(/images/quest-info.png);
+    background: url(/images/quest-info.webp);
     background-repeat: no-repeat;
     background-size: contain;
     width: 80%;

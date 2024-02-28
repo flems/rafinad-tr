@@ -39,10 +39,10 @@ defineProps({
 
 <style lang="scss">
 .sponsor-card {
-    --bgImage: url('/images/bg-sponsor-card.png');
+    --bgImage: url('/images/bg-sponsor-card.webp');
     
     &--size-xl {
-        --dagonImg: url('/images/sponsor-dragon-1.png');
+        --dagonImg: url('/images/sponsor-dragon-1.webp');
         --mixBlendMode: darken;
         --titleFontSize: 32px;
         --textFontSize: 20px;
@@ -65,7 +65,7 @@ defineProps({
     }
 
     &--size-l {
-        --dagonImg: url('/images/sponsor-dragon-2.png');
+        --dagonImg: url('/images/sponsor-dragon-2.webp');
         --mixBlendMode: luminosity;
         --titleFontSize: 25px;
         --textFontSize: 17px;
@@ -73,7 +73,7 @@ defineProps({
     }
     
     &--size-m {
-        --dagonImg: url('/images/sponsor-dragon-3.png');
+        --dagonImg: url('/images/sponsor-dragon-3.webp');
         --mixBlendMode: luminosity;
         --titleFontSize: 18px;
         --textFontSize: 15px;
@@ -81,7 +81,7 @@ defineProps({
     }
     
     &--size-s {
-        --dagonImg: url('/images/sponsor-dragon-4.png');
+        --dagonImg: url('/images/sponsor-dragon-4.webp');
         --mixBlendMode: luminosity;
         --titleFontSize: 18px;
         --textFontSize: 15px;
