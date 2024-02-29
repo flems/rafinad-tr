@@ -1,11 +1,5 @@
 # rafinad
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
@@ -27,9 +21,18 @@ npm run dev
 ```sh
 npm run build
 ```
+файл собираются в папку dist
+при передаче архива для размещения в файлах `assets/main.js` и `assets/main.css` необходимо подправить пути автозаменой по всему файлу
+все url начинаются так `/images/..`, `/fonts/..`, `/files/..`
 
-### Lint with [ESLint](https://eslint.org/)
+### Для домена https://trafficjam-2024.ru/
 
-```sh
-npm run lint
-```
+`main.css` - начало url  `/` на `../`, пример `/images/bg-body_1.webp` -> `../images/bg-body_1.webp`
+
+`main.js` - начало url  `/` на `./`, пример `/images/icons/telegram.svg` -> `./images/icons/telegram.svg`
+
+### Для домена https://rafinad.io/trafficjam2024/
+
+в `main.css`, `main.js`
+
+меняем начало url `/` на `/static/web/trafficjam2024/`, пример `/images/bg-body_1.webp` -> `/static/web/trafficjam2024/images/bg-body_1.webp`
