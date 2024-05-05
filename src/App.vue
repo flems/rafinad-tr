@@ -27,7 +27,7 @@ const handleLoad = () => {
   loading.value = false;
 };
 
-// на айфона не отрабатывал canplay и canplaythrough, браузеры могут игнорировать атрибуты preload на видео, поэтому видео грузится отдельно ajax запросом и после загрузки запускается анимация
+// на айфон не отрабатывал canplay и canplaythrough, браузеры могут игнорировать атрибуты preload на видео, поэтому видео грузится отдельно ajax запросом и после загрузки запускается анимация
 const preloadVideo = (url, key) => {
   // Создаем новый объект XMLHttpRequest
   const xhr = new XMLHttpRequest();
@@ -38,7 +38,6 @@ const preloadVideo = (url, key) => {
   xhr.onload = function() {
       if (xhr.status === 200) {
           const blob = new Blob([xhr.response], { type: 'video/mp4' });
-          // console.log(key, 'Video fully loaded');
           videoLoadedStatus.value[key] = true
       }
   };
@@ -81,8 +80,8 @@ const isLoadingComplete = computed(() => {
 
 onMounted(() => {
   nextTick(() => {
-    window.addEventListener("load", (event) => {
-      handleLoad();
+    window.addEventListener('load', (event) => {
+      handleLoad()
     });
   });
 });
@@ -93,8 +92,8 @@ onBeforeMount(() => {
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener("load", (event) => {
-    handleLoad();
+  window.removeEventListener('load', (event) => {
+    handleLoad()
   });
 });
 </script>

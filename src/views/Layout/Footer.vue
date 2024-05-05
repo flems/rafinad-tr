@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-12 col-md-6 col-xl-3 col-lg-4">
             <div class="footer__logo-wrapper">
-              <a href="https://rafinad.io/" target="_blank"><img class="footer__logo" src="/images/rafinda-logo-white.svg" alt=""></a>
+              <a href="#" target="_blank"><img class="footer__logo" src="/images/rafinda-logo-white.svg" alt=""></a>
               <p class="footer__copyright">©️ 2024 Rafinad  ИНН 561654684</p>
             </div>
           </div>
@@ -33,32 +33,32 @@ import FooterNav from '@/components/FooterNav'
 
 const footerMenu = [
   {
-    link: 'https://rafinad.io/static/web/trafficjam2024/rules.pdf',
+    link: '#',
     name: 'Публичная оферта'
   },
   {
-    link: 'https://rafinad.io/static/web/trafficjam2022/politics.pdf',
+    link: '#',
     name: 'Политика конфиденциальности'
   },
   {
-    link: 'https://rafinad.io/faq/',
+    link: '#',
     name: 'Вопрос-ответ'
   }
 ]
 
 const socialList = [
   {
-    link: 'https://t.me/rafinad_channel',
+    link: '#',
     name: 'Telegram',
     icon: '/images/icons/telegram.svg'
   },
   {
-    link: 'https://vk.com/rafinad_cpa',
+    link: '#',
     name: 'Вконтакте',
     icon: '/images/icons/vk.svg'
   },
   {
-    link: 'http://tenchat.ru/rafinadio',
+    link: '#',
     name: 'TenChat',
     icon: '/images/icons/tenchat.svg'
   }

@@ -37,7 +37,6 @@
 <script setup>
 import { onMounted, ref, computed, onUnmounted } from 'vue'
 
-
 const timer = ref(null)
 const timeend1 = new Date(2024, 2, 1, 12, 0, 0, 0)
 const timeend2 = new Date(2024, 9, 31, 23, 59, 59, 0)

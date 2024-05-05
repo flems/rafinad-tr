@@ -12,69 +12,6 @@
                     />
                 </div>
             </div>
-            <!-- по другим спонсора не доделано и было поставлено на паузу -->
-            <!-- <div class="mp-sponsors__row mp-sponsors__row--2">
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="l"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="l"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-            </div>
-            <div class="mp-sponsors__row mp-sponsors__row--3">
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="m"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="m"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="m"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-            </div>
-            <div class="mp-sponsors__row mp-sponsors__row--3">
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="s"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-                <div class="mp-sponsors__col">
-                    <sponsor-card
-                        size="s"
-                        logo="/images/sponsors/rosbank.webp"
-                        title="Алмазный дракон"
-                        text="За каждые заработанные 100 рублей начисляется 10 сахарков. По спонсорским офферам начисляется 20, 30 и даже 40 сахарков в зависимости от спонсора!"
-                    />
-                </div>
-            </div> -->
         </div>
     </div>
 </template>
@@ -115,22 +52,6 @@ import SponsorCard from '@/components/SponsorCard/SponsorCard.vue'
                 @media (max-width: 1024px) {
                     width: 100%;
                 }
-            }
-        }
-
-        &--2 {
-            column-gap: 32px;
-
-            .mp-sponsors__col {
-                width: 50%;
-            }
-        }
-
-        &--3 {
-            column-gap: 32px;
-
-            .mp-sponsors__col {
-                width: 33.3%;
             }
         }
     }

@@ -54,7 +54,7 @@
       </div>
 
       <div class="banner__link">
-        <ui-link href="https://rafinad.io/" target="_blank" theme="red">
+        <ui-link href="#" target="_blank" theme="red">
           Присоединиться к охоте
         </ui-link>
       </div>

@@ -2,12 +2,12 @@
   <header class="header">
     <div class="container header__container">
       <div class="header__login">
-        <ui-link href="https://rafinad.io/" target="_blank">
+        <ui-link href="#" target="_blank">
           login
         </ui-link>
       </div>
       <div class="header__logo">
-        <a href="https://rafinad.io/" target="_blank">
+        <a href="#" target="_blank">
           <img src="/images/rafinad-logo.svg" alt="Rafinad">
         </a>
       </div>

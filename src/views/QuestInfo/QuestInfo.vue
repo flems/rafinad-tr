@@ -21,6 +21,7 @@
 <script setup>
 import UiCard from '@/components/UiCard/UiCard.vue'
 </script>
+
 <style lang="scss">
 .quest-info {
   .container {
